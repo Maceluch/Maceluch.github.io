@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Maciej S. Celuch Portfolio</title>
+	<meta name="description" content="Portfolio of Maciej S. Celuch" />
+	<meta name="keywords" content="CV, portoflio, projects" />
+	<meta name="author" content="Maciej S. Celuch" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+
+<body>	
+	<header id = "page-header" class = "navhide">	
+		<nav id = "navbar" >
+			<ul id = "navlist">
+				<li id = "portrait" class="btn btn-cap">
+					<img class = "hide" src="MaciejS.Celuch.png" alt="my portrait">					
+					<div class = "icon">
+						<i class = "icon-picture"></i>
+						<span>Show portrait</span>
+					</div>
+				</li>
+				<li class="btn btn-cap">
+					<input id = "welcome" class="nav-link" type="radio" name="radio" value="#s-welcome">				
+					<label for="welcome" class="icon">						
+						<i class="icon-user"></i>
+						<span>Landing page</span>
+					</label>
+				</li>
+				<li class="btn btn-cap">
+					<input id = "web-projects" class="nav-link" type="radio" name="radio" value="#s-web-projects">							
+					<label for="web-projects" class="icon">						
+						<i class="icon-html5"></i>
+						<span>Web projects</span>
+					</label>
+				</li>
+				<li class="btn btn-cap">
+					<input id = "other-projects" class="nav-link" type="radio" name="radio" value="#s-other-projects">	
+					<label for="other-projects" class="icon">							
+						<i class="icon-gamepad"></i>
+						<span>Other projects</span>
+					</label>
+				</li>
+				<li class="btn btn-cap">	
+					<input id = "hobby" class="nav-link" type="radio" name="radio" value="#s-hobby">				
+					<label for="hobby" class="icon">						
+						<i class="icon-bicycle"></i>
+						<span>&nbsp Hobby</span>
+					</label>
+				</li>
+				<li class="btn btn-cap">
+					<input id = "contact" class="nav-link" type="radio" name="radio" value="#s-contact">		
+					<label for="contact" class="icon">						
+						<i class="icon-mail"></i>
+						<span>Contact</span>
+					</label>
+				</li>
+			</ul>
+		</nav>
+		
+		<div id = "foldout-nav" class="btn btn-cap" title="CTRL + Q">
+			<input id="foldout-toggle" onclick="toggleMenu(false)" type="checkbox" checked="">
+			<label for="foldout-toggle" class = "icon">
+				<i class = "icon-down-open"></i>
+				<span>Open</span>
+			</label>
+		</div>
+	</header>
+	
+	<main id = "page-main">
+
+		<section id="s-welcome" class="section-bar">
+			<header>
+				<h1>PORTFOLIO</h1>
+			</header>
+			<div>
+				<h2>of Maciej S. Celuch</h2>
+				<p>a web developer</p>
+			</div>
+			<img src="left-blue.svg" alt="left arrow">
+		</section>
+
+		<section id="s-web-projects" class="section-bar hide">
+			<!-- dynamically created in JS -->
+		</section>
+		
+		<section id="s-dev-projects" class="section-bar hide">
+			<!-- dynamically created in JS -->
+		</section>
+
+		<section id="s-hobby" class="section-bar hide">
+			<header>
+				<h2>I love</h2>
+			</header>			
+			<ul class="section-content"><!-- dynamically created in JS --></ul>
+			<article id = "hobby-info" class = "section-desc">
+				<p><!-- dynamically created in JS --></p>
+			</article>			
+		</section>
+
+		<section id="s-contact" class="section-bar hide">
+			<header>								
+				<div class = "icon">					
+					<h2>Let's work together</h2>
+					<i class="icon-handshake-o"></i>
+				</div>				
+			</header>
+			<article>
+				<ul class = "contact-item">
+					<li >
+						<a class = "icon" href="mailto:celcjusz@gmail.com">
+							<i class="icon-at"></i>
+							<div>Email adress</div>
+						</a>						
+					</li>
+					<li>
+						<a class = "icon" href="https://github.com/Maceluch/mscPortfolio.git" target = "_blank">
+							<i class="icon-github"></i>
+							<div>GitHub</div>
+						</a>
+					</li>
+					<li class = "icon">
+						<a href="tel:(48) 500-356-680">
+							<i class="icon-mobile"></i>
+							<div>Phone number</div>
+						</a>
+					</li>
+				</ul>
+			</article>
+		</section>
+	</main>
+
+	<footer class = "hide page-footer">
+		<div>&copy Maciej S. Celuch</div>
+	</footer>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
