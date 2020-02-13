@@ -16,7 +16,7 @@
 </head>
 
 <body>	
-	<header id = "page-header" class = "navhide">	
+	<header id = "page-header" class = "navhide">
 		<nav id = "navbar" >
 			<ul id = "navlist">
 				<li id = "portrait" class="btn btn-cap">
@@ -62,15 +62,14 @@
 					</label>
 				</li>
 			</ul>
-		</nav>
-		
-		<div id = "foldout-nav" class="btn btn-cap" title="CTRL + Q">
-			<input id="foldout-toggle" onclick="toggleMenu(false)" type="checkbox" checked="">
-			<label for="foldout-toggle" class = "icon">
-				<i class = "icon-down-open"></i>
-				<span>Open</span>
-			</label>
-		</div>
+			<div id = "foldout-nav" class="btn btn-cap" title="CTRL + Q">
+				<input id="foldout-toggle" onclick="toggleMenu(false)" type="checkbox" checked="">
+				<label for="foldout-toggle" class = "icon">
+					<i class = "icon-down-open"></i>
+					<span>Open</span>
+				</label>
+			</div>
+		</nav>		
 	</header>
 	
 	<main id = "page-main">
@@ -99,7 +98,9 @@
 			</header>			
 			<ul class="section-content"><!-- dynamically created in JS --></ul>
 			<article id = "hobby-info" class = "section-desc">
-				<!-- dynamically created in JS -->
+				<div class = "section-inside-desc">
+					<!-- dynamically created in JS -->
+				</div>				
 			</article>			
 		</section>
 
@@ -133,12 +134,10 @@
 				</ul>
 			</article>
 		</section>
+		<footer class = "hide page-footer">
+			<div>&copy Maciej S. Celuch</div>
+		</footer>
 	</main>
-
-	<footer class = "hide page-footer">
-		<div>&copy Maciej S. Celuch</div>
-	</footer>
-
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

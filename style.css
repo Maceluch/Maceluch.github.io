@@ -156,58 +156,55 @@ input[type="radio"]:checked + .icon{
     -ms-user-select: none;            
 }
 #page-header {
+  z-index: 100;
   font-weight: 700;
-  z-index:100;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;  
+  height: 10vh;
+  width: 100%;
+  min-height: var(--header-height);
 }
 #navbar {  
   width: 100%;
+  height: 100%;  
 }
 #navlist { 
   margin:0;
   padding: 0;
-  height: 10%;
-  min-height: var(--header-height);
+  height: 100%;  
   display: flex;  
-  z-index:100;
+  
 }
 #foldout-nav {
   display: none;  
 }
 
 @media only screen and (max-width: 43.8em) {
-  #navlist { 
-    height: var(--menu-item-col-min-width);    
+  #page-header { 
+    min-height: var(--menu-item-col-min-width);    
   } 
 }
 @media only screen and (max-width: 30.6em) {
-  #page-header {    
-    transition: transform .3s ease-in-out;
-      -webkit-transition: transform .3s ease-in-out;
-      -moz-transition: transform .3s ease-in-out;
-      -ms-transition: transform .3s ease-in-out;
-      -o-transition: transform .3s ease-in-out;
+  #page-header {  
+    min-height: var(--header-height);  
+    position: relative;
   }
-  .navhide  {    
-    transform: translateY(calc(var(--header-height)*-3));
-      -webkit-transform: translateY(calc(var(--header-height)*-3));
-      -moz-transform: translateY(calc(var(--header-height)*-3));
-      -o-transform: translateY(calc(var(--header-height)*-3));
-      -ms-transform: translateY(calc(var(--header-height)*-3));
-    height: var(--header-height);
-  }
-  .navhide #navbar {
-    pointer-events: none;
-  } 
-  #navlist {
-    width: 100vw;
+  #navbar{ 
+    position: absolute;
     height: min-content;
+  }
+  .navshow #navbar{
+    top: 0;
+  }
+  .navhide #navbar{
+    bottom: 0;
+  }  
+  #navbar #navlist {
+    width: 100vw;
     flex-wrap: wrap;
   }
+  .navhide #navbar #navlist{
+    pointer-events: none;    
+  }
   #foldout-nav {
-    position: relative;
     display: block;
     width: 100vw;
     box-shadow: 0 0.2rem 0.2rem var(--light-shadow);    
@@ -216,7 +213,8 @@ input[type="radio"]:checked + .icon{
 
 /*---------------------- Main &Sections & Page footer--------------------*/
 main {
-  height: 100%;
+  height: 90vh;
+  z-index: 0;
 }
 .section-bar {
   height: 100%;
@@ -242,7 +240,7 @@ main {
 }
 .section-bar header {
   box-sizing: border-box;
-  height: 10%;
+  height: 10%;  
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -254,9 +252,8 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 100%;  
-  min-height: 28rem;
-  height: 34.4vh;   
-  margin-top: 1rem; margin-bottom: 1rem ;
+  height: 34.4%;   
+  padding-top: 1rem; padding-bottom: 1rem ;
 }
 .section-bar .section-content .project-move{
   width: 20%;  
@@ -356,29 +353,40 @@ main {
 
 #s-web-projects .section-desc{      
   background-color: var(--blue-dark);
- 
 } 
 #s-dev-projects .section-desc{
   background-color: var(--grey-dark);
 }
 .section-bar .section-desc {
   box-sizing: border-box;
-  height: 45.6vh;
+  height: 55.6%;
   width: 100%;
-  overflow-y: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
   box-shadow: 0 0.2rem 0.2rem var(--light-shadow);
+}
+.section-inside-desc {
+  overflow-y: auto;
+  height: 100%;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: justify;
   color: var(--white);
-  padding-left: 10%;
-  padding-right: 10%;
-}  
-.section-bar .section-desc ul{ 
+}
+.section-bar .section-desc .section-inside-desc ul{
  list-style: circle inside;
-} 
-.section-bar .section-desc a{ 
-  text-decoration: underline;    
-  color: var(--orange);      
-}      
+}
+.section-bar .section-desc .section-inside-desc li{
+  padding-bottom:0.5rem;
+  padding-top: 0.5rem;
+ }
+.section-bar .section-desc .section-inside-desc a{
+  text-decoration: underline;
+  color: var(--orange);
+}
+
+
 
 #s-hobby {
   background-image: linear-gradient(120deg, var(--blue-dark) 0%, var(--black-dark) 100%);  
@@ -389,10 +397,10 @@ main {
 #s-hobby .section-content{
   flex-direction: column;
   box-sizing: border-box;
-  padding: 1rem;
-  margin-top: 1rem; margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   width: 32rem;
-  box-shadow: 0 0.2rem 0.2rem var(--light-shadow);
+  box-shadow: 0 -0.2rem 0.2rem var(--light-shadow);
 }
 #s-hobby .section-content li{
   display: flex;
@@ -401,8 +409,7 @@ main {
 }
 
 #s-contact {
-  padding-top: var(--header-height);
-  height: calc(100vh - 2*var(--header-height));
+  height: 80vh;
   background-color: var(--grey-dark);
   justify-content: center;
 }
@@ -435,6 +442,7 @@ main {
 
 .page-footer {
   min-height: var(--header-height);
+  height: 10vh;
   display: flex;
   justify-content: center;
   box-shadow: 0 -0.2rem 0.2rem var(--light-shadow);
@@ -449,8 +457,8 @@ main {
 
 /*----------------------Buttons--------------------*/
 .btn {
-  position: relative;
   flex: 1 1 1rem;
+  position: relative;
   box-shadow: 0 0.2rem 0.2rem var(--light-shadow);
 }
 
@@ -511,7 +519,7 @@ main {
 }
 @media only screen and (max-width: 43.8em) {
   .btn {
-    max-height: var(--menu-item-col-min-width);
+    min-height: var(--menu-item-col-min-width);
   }
   .btn-overlay {
     min-width: var(--menu-item-col-min-width);
@@ -526,7 +534,6 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: center;    
-    max-height: var(--menu-item-col-min-width);
   }
   #portrait img {    
     max-height: 100%;
@@ -534,16 +541,16 @@ main {
 }
 @media only screen and (max-width: 30.6em) {  
   .btn {
-    max-height: var(--header-height);    
+    min-height: var(--header-height);    
   }
   .btn-cap .icon {
-    height:100%;  
+    height:100%;
+    min-height: 10vh;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     text-align: left;
-    min-height: var(--header-height);
-    min-width: 50vw;    
+    min-width: 50vw;
   }
 }
 
@@ -555,7 +562,6 @@ main {
   max-width: 100%;
   max-height: 100%;
 }
-
 
 .hide {
   display: none

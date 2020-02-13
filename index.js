@@ -12,6 +12,7 @@ const arIconPortrait = ["icon-picture","icon-cancel"];
 const arBtnPortrait = ["btn-cap","btn-overlay","btn-awaiting"];
 const classHide = "hide";
 const classNavhide = "navhide";
+const classNavshow = "navshow";
 const idFoldoutNav = "foldout-nav";
 const idFoldoutToggle = "foldout-toggle";
 const arSpanFoldoutMenu = ["Open", "Close"];
@@ -221,15 +222,15 @@ function togglePortrait() {
     }
 };
 
-function toggleMenu(F_KEY) {
+function toggleMenu(forceInputCheck) {
     // toggle nav visibility  
     selIdHeader.classList.toggle(classNavhide);
-    
+    selIdHeader.classList.toggle(classNavshow);
     // set header child selections
     const SEL_ID_FOLDOUT_MENU = selIdHeader.querySelector(`#${idFoldoutNav}`);
     const SEL_INPUT = SEL_ID_FOLDOUT_MENU.querySelector(`input`);
     // if CTRL + M -> toggle checkbox
-    if (F_KEY) {
+    if (forceInputCheck) {
       SEL_INPUT.checked = !SEL_INPUT.checked
     }  
     
@@ -248,6 +249,8 @@ function toggleMenu(F_KEY) {
 };
 
 function toggleSection(num) {
+  //hide nav when foldoutnav is visible
+  if (selIdHeader.className != classNavhide) toggleMenu(true);
   //toggle footer for contact and toggle section 
   if(lCurrentPage == 4) document.body.querySelector(`.page-footer`).classList.toggle(classHide);
   document.querySelector(arIdSections[lCurrentPage]).classList.toggle(classHide);
@@ -287,10 +290,10 @@ function moveProject (movedLeft = false) {
 function updateProjectDesc (projectKey,projectMidId) {   
   document.querySelector(arIdSections[projectKey == "web" ? 1 : 2])
     .querySelector(".section-desc")
-    // .querySelector("p")
+    .querySelector(".section-inside-desc")
     .innerHTML = oProjects[projectKey][projectMidId].desc
       .replace(/URL{/g,`<a href="${oProjects[projectKey][projectMidId].descLink}" target = "_blank">`)
-      .replace(/}/g,`</a>`).replace(/^|$/,"<br>");
+      .replace(/}/g,`</a>`);
 }
 const hashId = (id) => /^#/.test(id) ? id : `#${id}`;
 
@@ -306,9 +309,9 @@ function updateHobbyDesc(num) {
     }
 
   const hobbyDescSplit = arHobbies[num].desc.split(`URL{`);
-  const hobbyDesc = `<br>${hobbyDescSplit.shift()}${hobbyDescSplit.map((el,id) => el.replace(/^/,`<a href = "${arHobbies[num].descArray[id]}" target="_blank">`).replace(`}`,`</a>`)).join(``)}<br>`;
+  const hobbyDesc = `${hobbyDescSplit.shift()}${hobbyDescSplit.map((el,id) => el.replace(/^/,`<a href = "${arHobbies[num].descArray[id]}" target="_blank">`).replace(`}`,`</a>`)).join(``)}`;
   
-  document.body.querySelector('#hobby-info').innerHTML = hobbyDesc;
+  document.body.querySelector('#hobby-info').querySelector('.section-inside-desc').innerHTML = hobbyDesc;
   })
 }
 
@@ -419,17 +422,15 @@ function onLoad() {
       // content - right arrow - events
       selRightArrow.addEventListener("click",() => {        
         selRightArrowImg.src = arrowRightColorSrc;
-        selRightArrowImg.style.transform = "";
         moveProject();
       });
       selRightArrow.addEventListener("mouseleave",() => {
         selRightArrowImg.src = arrowRightColorSrc;
         selRightArrowImg.style.filter = "";
-        selRightArrowImg.style.transform = "";
       });
       selRightArrow.addEventListener("mousedown",() => {
-        selRightArrowImg.src=`svg/left-white.svg`;
-        selRightArrowImg.style.transform = `scaleX(-1)`; // flip horizontally        
+        selRightArrowImg.src=`svg/right-white.svg`;
+        
       });
       selRightArrow.addEventListener("mouseover",() => {
         selRightArrowImg.style.filter =`drop-shadow(0 0 1rem var(--white))`;        
@@ -438,7 +439,7 @@ function onLoad() {
        // add project description
       const projectDesc = selProjects.appendChild(document.createElement('div'));
       projectDesc.className = "section-desc";      
-      // projectDesc.appendChild(document.createElement('p'));
+      projectDesc.appendChild(document.createElement('div')).className = `section-inside-desc`;
       updateProjectDesc(key, midTileId);
     }
   }
