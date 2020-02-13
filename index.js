@@ -57,7 +57,7 @@ const oProjects = {
   ],
 
   "dev": [{
-      "name": "Python &amp C++ projects",
+      "name": "Python &amp C++",
       "desc": "No projets made since my studies. Would love to go back to Python in the future if the opportunity arises.<br><br>The one part of my dream is to take a closer look into machine learning and/or neural network in the future. The second part is to understand at least one of them...<br><br>So maybe Python will come to me once again.",
       "descLink": "",
       "url": ""
@@ -90,7 +90,7 @@ const oProjects = {
       "descLink": "https://play2048.co/",
       "url": "" 
     },{
-      "name": "ETL projects",
+      "name": "ETL",
       "desc": `I've worked for one year as an ETL developer. My main responsibilities in a project were:
       <br><br>
       <ul> 
