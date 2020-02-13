@@ -21,19 +21,23 @@ const oProjects = {
   "web": [
     {
       "name": "Memory test",
-      "desc": "Web game based on Miroslaw Zelent's URL{course.}<br>JS written from scratch to learn jQuery",
+      "desc": `Web game based on Miroslaw Zelent's URL{course.} It's almost a copy.
+              <br><br>
+              I've written JS from scratch to learn jQuery's fundamentals.
+              <br><br>
+              I've also added some fixes (i.e. now you can't double click the same card).`,
       "descLink": "https://www.youtube.com/watch?v=edNqTubHUU0",
       "url": "web-projects/memory-test/index.html"
     },
     {
       "name": "Hangman",
-      "desc": "Web game based on Miroslaw Zelent's URL{course.}<br>My first use of API.",
+      "desc": "Web game based on Miroslaw Zelent's URL{course.}<br><br>I've added and updated some functionality (i.e now the password is randomly created from JSON file, which contains ~14.000 words with descriptions).<br><br>",
       "descLink": "https://www.youtube.com/watch?v=9FVtiJHFCSU",
       "url": "web-projects/hangman/index.html"
     },
     {
       "name": "1 out of 10",
-      "desc": 'My first own web game. Inspired by the polish TV program "Jeden z dziesięciu (1 z 10)."',
+      "desc": 'My own web game inspired by the polish TV program "Jeden z dziesięciu (1 z 10)."',
       "descLink": "",
       "url": "web-projects/one-out-of-ten/index.html"
     },
@@ -53,28 +57,54 @@ const oProjects = {
 
   "dev": [{
       "name": "Python &amp C++ projects",
-      "desc": "No projets made since my studies. Would love to go back to Python in the future if the opportunity arises.",
+      "desc": "No projets made since my studies. Would love to go back to Python in the future if the opportunity arises.<br><br>The one part of my dream is to take a closer look into machine learning and/or neural network in the future. The second part is to understand at least one of them...<br><br>So maybe Python will come to me once again.",
       "descLink": "",
       "url": ""
     },{
       "name": "Falling ball",
-      "desc": "Created the game together with my friend URL{Jarosław Szczepaniak}. Versions available: .apk (android), .exe (windows)",
+      "desc": `Created the game together with my friend URL{Jarosław Szczepaniak} in Clickteam Fusion 2.5.
+              <br><br>
+              Versions available: .apk (android), .exe (windows)
+              <br><br>
+              Clickteam Fusion 2.5 is a game engine similar to the most famous "Unity" or "Unreal Engine".`,
       "descLink": "https://www.jaroslawszczepaniak.pl/",
       "url": ""
     },{
       "name": "Triandom",
-      "desc": "My own game. Soon will be availabe on the URL{Google Play} for all users. Alpha tests in progress. Only users that have access can download the game at the moment.",
+      "desc": `My own game made in Clickteam Fusion 2.5. Soon will be availabe on the URL{Google Play} for all users. Alpha tests in progress.
+              <br><br>
+              Versions available: .apk (android), .exe (windows)
+              <br><br>
+              Clickteam Fusion 2.5 is a game engine similar to the most famous "Unity" or "Unreal Engine".`,
       // "descLink": "#", here should be a link to youtube channel msc.triandom
       "descLink": "https://play.google.com/apps/testing/com.maciejceluch.triandom",      
       "url": ""
     },{
       "name": "1024",
-      "desc": 'My very first finished game based on the classic URL{2048.} Versions available: .apk (android), .exe (windows).',
+      "desc": `My very first finished game based on the classic URL{2048.}
+      <br><br>
+      Versions available: .apk (android), .exe (windows).      
+      <br><br>
+      Clickteam Fusion 2.5 is a game engine similar to the most famous "Unity" or "Unreal Engine".`,
       "descLink": "https://play2048.co/",
       "url": "" 
     },{
       "name": "ETL projects",
-      "desc": "Have been working for one year as an ETL developer. Technologies &amp tools: Informatica PowerCenter, Oracle Database, Oracle SQL developer, Tableau.",
+      "desc": `I've worked for one year as an ETL developer. My main responsibilities in a project were:
+      <br><br>
+      <ul> 
+        <li>Data extraction out of external sources (mainly Oracle databases);</li>
+        <li>Preparation of data versioning mechanism to properly detect data changes (updates, inserts, deletes);</li>
+        <li>Creation and (re)designing of mappings through sessions and workflows in the Informatica PWC in all layers (i.e stage, core, data mart);</li>
+        <li>Adding, linking, calculating new attributes for all layers;</li>
+        <li>Metadata (XML and SQL) migration from one environment to another;</li>
+        <li>Preparation of the views that read data from the Data Mart layer. For example the views should reflect the old logic from the previous (old) project.;</li>
+        <li>Documentation preparation in JIRA, code documentation in SVN</li>
+      </ul>
+      <br><br>
+      Technologies & tools: Informatica PowerCenter, Oracle Database, Oracle SQL developer, Tableau.
+      <br><br>
+      I've also had a contact with Microsoft SQL Server Integration Services (SSIS), and Tableau but no longer than 2 weeks.`,
       "descLink": "",
       "url": ""
     }
@@ -83,7 +113,28 @@ const oProjects = {
 const arHobbies = [
   {
     "name": `Boardgames`,
-    "desc": `I love abstract connection games. My favourite ones are URL{Hex} and URL{Twixt}, where I am ranked as a one of the world's top player. I use different nicknames: "nie_wiesz": (URL{BGA - hex}, URL{IGG - hex}, URL{IGG - twixt}), "nievviesz": URL{kurnik/playok - hex} and "Maciej Celuch": (URL{LG - hex}, URL{LG - hex19}, URL{LG - twixt}).`,
+    "desc": `I love abstract connection games. My favourite ones are URL{Hex} and URL{Twixt}, where I am one of the world's best players.
+    <br><br>
+    I use different nicknames: "nie_wiesz":
+    <br>
+    <ul>
+      <li>URL{BGA - hex}</li>
+      <li>URL{IGG - hex}</li>
+      <li>URL{IGG - twixt},</li>
+    </ul>
+    <br>
+    "nievviesz":
+    <br>
+    <ul>
+      <li>URL{kurnik/playok - hex}</li>      
+    </ul>
+    <br>
+    and "Maciej Celuch":
+    <ul>
+      <li>URL{LG - hex}</li>
+      <li>URL{LG - hex19}</li>
+      <li>URL{LG - twixt}.</li>
+    </ul>`,
     "descArray": [
       `https://en.wikipedia.org/wiki/Hex_(board_game)`, //Hex
       `https://en.wikipedia.org/wiki/TwixT`, // Twixt
@@ -236,7 +287,7 @@ function moveProject (movedLeft = false) {
 function updateProjectDesc (projectKey,projectMidId) {   
   document.querySelector(arIdSections[projectKey == "web" ? 1 : 2])
     .querySelector(".section-desc")
-    .querySelector("p")
+    // .querySelector("p")
     .innerHTML = oProjects[projectKey][projectMidId].desc
       .replace(/URL{/g,`<a href="${oProjects[projectKey][projectMidId].descLink}" target = "_blank">`)
       .replace(/}/g,`</a>`).replace(/^|$/,"<br>");
@@ -257,7 +308,7 @@ function updateHobbyDesc(num) {
   const hobbyDescSplit = arHobbies[num].desc.split(`URL{`);
   const hobbyDesc = `<br>${hobbyDescSplit.shift()}${hobbyDescSplit.map((el,id) => el.replace(/^/,`<a href = "${arHobbies[num].descArray[id]}" target="_blank">`).replace(`}`,`</a>`)).join(``)}<br>`;
   
-  document.body.querySelector('#hobby-info').querySelector('p').innerHTML = hobbyDesc;
+  document.body.querySelector('#hobby-info').innerHTML = hobbyDesc;
   })
 }
 
@@ -296,21 +347,41 @@ function onLoad() {
         .appendChild(document.createElement('h2'))
         .innerHTML = `My ${isWeb ? "" : "non-" }web projects`;
       
-        // content
+      // content
       const selProjectContent = selProjects.appendChild(document.createElement('div'));
       selProjectContent.classList.add(`section-content`);
-        // content - left arrow
+      // content - left arrow
       selProjectContent.appendChild(document.createElement(`div`)).className += `project-move-left project-move`;
-      const selLeftArrow = selProjectContent.querySelector(`.project-move-left`).appendChild(document.createElement(`div`))
-      selLeftArrow.classList.add(`angle-arrow`);
-      selLeftArrow.title = `CTRL + leftArrow`;
-      selLeftArrow.addEventListener("click",() => {
-        moveProject(true);
-      });
-        // content - group of tiles
+      
+      const arrowColorSrc = `svg/left-${isWeb ? "blue" : "grey"}.svg`;
+      const selLeftArrow = selProjectContent.querySelector(`.project-move-left`).appendChild(document.createElement(`button`));
+      selLeftArrow.style.background=`transparent`;
+      selLeftArrow.style.border=`none`;
+      const selLeftArrowImg = selLeftArrow.appendChild(document.createElement(`img`));
+      
+        selLeftArrowImg.src = arrowColorSrc;
+        selLeftArrow.classList.add(`btn-angle`);
+        selLeftArrow.title = `CTRL + leftArrow`;
+        selLeftArrow.addEventListener("click",() => {        
+          selLeftArrowImg.src = arrowColorSrc;
+          moveProject(true);
+        });
+        selLeftArrow.addEventListener("mouseleave",() => {
+          selLeftArrowImg.src = arrowColorSrc;
+          selLeftArrowImg.style.filter = "";
+        });
+        selLeftArrow.addEventListener("mousedown",() => {
+          selLeftArrowImg.src=`svg/left-white.svg`;          
+        });
+        selLeftArrow.addEventListener("mouseover",() => {
+          selLeftArrowImg.style.filter =`drop-shadow(0 0 1rem var(--white))`;        
+        });
+
+      // content - group of tiles
       const selProjectGroup = selProjectContent.appendChild(document.createElement('div'));
-      selProjectGroup.classList.add("project-group");      
-        // group of tiles - each tile
+      selProjectGroup.classList.add("project-group");   
+
+      // group of tiles - each tile
       oProjects[key].forEach( (el,id,ar) => {        
         const projectTile = selProjectGroup
           .appendChild(projectArticle.cloneNode(true)); //deep clone
@@ -334,18 +405,40 @@ function onLoad() {
         });
         styleProjectTile(projectTile,id,ar.length);        
       });
+
       // content - right arrow
-      selProjectContent.appendChild(document.createElement(`div`)).className += `project-move-right project-move`;   
-      const selRightArrow = selProjectContent.querySelector(`.project-move-right`).appendChild(document.createElement(`div`));
+      selProjectContent.appendChild(document.createElement(`div`)).className += `project-move-right project-move`;
+      const arrowRightColorSrc = `svg/right-${isWeb ? "blue" : "grey"}.svg`; 
+      const selRightArrow = selProjectContent.querySelector(`.project-move-right`).appendChild(document.createElement(`button`));
+      const selRightArrowImg = selRightArrow.appendChild(document.createElement(`img`));
+      selRightArrowImg.src = arrowRightColorSrc;
+      selRightArrow.style.background=`transparent`;
+      selRightArrow.style.border=`none`;
       selRightArrow.title = `CTRL + rightArrow`;
-      selRightArrow.classList.add(`angle-arrow`);
-      selRightArrow.addEventListener("click",() => {
+      selRightArrow.classList.add(`btn-angle`);
+      // content - right arrow - events
+      selRightArrow.addEventListener("click",() => {        
+        selRightArrowImg.src = arrowRightColorSrc;
+        selRightArrowImg.style.transform = "";
         moveProject();
       });
-      // add project description
+      selRightArrow.addEventListener("mouseleave",() => {
+        selRightArrowImg.src = arrowRightColorSrc;
+        selRightArrowImg.style.filter = "";
+        selRightArrowImg.style.transform = "";
+      });
+      selRightArrow.addEventListener("mousedown",() => {
+        selRightArrowImg.src=`svg/left-white.svg`;
+        selRightArrowImg.style.transform = `scaleX(-1)`; // flip horizontally        
+      });
+      selRightArrow.addEventListener("mouseover",() => {
+        selRightArrowImg.style.filter =`drop-shadow(0 0 1rem var(--white))`;        
+      });
+
+       // add project description
       const projectDesc = selProjects.appendChild(document.createElement('div'));
       projectDesc.className = "section-desc";      
-      projectDesc.appendChild(document.createElement('p'));
+      // projectDesc.appendChild(document.createElement('p'));
       updateProjectDesc(key, midTileId);
     }
   }

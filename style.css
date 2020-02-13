@@ -263,82 +263,15 @@ main {
   height: 100%;
   position: relative;
 }
-.section-bar .section-content .project-move-left .angle-arrow{ 
-  right: -8vh;  
-}
-.section-bar .section-content .project-move-right .angle-arrow{
-  left: -8vh;  
-}
-.section-bar .section-content .project-move .angle-arrow {
-    /*after the transformation the width is resized by 1/(sqrt(2) and the height is resized by sqrt(2)*/
-  position: absolute;
-  top: 14.65%;
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  width: 70.7%;
-  min-height: 18vh;
-  min-width: 18vh;
-  padding-top: 70.7%;
-  transform-origin: center;
-    -webkit-transform-origin: center;
-    -moz-transform-origin: center;   
-    -ms-transform-origin: center;   
-  transform: scaleX(0.5) rotate(45deg);  
-    -webkit-transform: scaleX(0.5) rotate(45deg);
-    -moz-transform: scaleX(0.5) rotate(45deg);
-    -ms-transform: scaleX(0.5) rotate(45deg);  
+.section-bar .section-content .project-move .btn-angle {
+  height: 100%;
+  width: 100%;
   cursor: pointer;
-  z-index:0;
 }
-@media only screen and (max-width: 30.6em) {
-  
-  .section-bar .section-content .project-move-left .angle-arrow{ 
-    left: 0vh;
-    right: auto;
-  }
-  .section-bar .section-content .project-move-right .angle-arrow{
-    right: 0vh;
-    left: auto;
-  }
+.section-bar .section-content .project-move .btn-angle img {
+  height: 100%;
+  width: 100%;  
 }
-/* It would be nice to change it dynamically in JS then add CTRL+(left/right)Arrow event to shine angle-arrow */
-/* To use .section-bar more dynamically and for example to add in the near future the hobby / projects into one css*/
-#s-web-projects .section-content .project-move-left .angle-arrow {
-  /* border-bottom-left*/  
-  box-shadow: -2rem 2rem 2rem var(--blue-dark);
-  background: linear-gradient(45deg, #00000000 40%,var(--blue-dark) 40%, #00000000 50%); 
-}
-#s-web-projects .section-content .project-move-left .angle-arrow:hover {
-  box-shadow: -2rem 2rem 2rem var(--white);
-  background: linear-gradient(45deg, #00000000 40%,var(--white) 40%, #00000000 50%); 
-}
-#s-web-projects .section-content .project-move-right .angle-arrow {
-  /* border-top-right*/ 
-  box-shadow: 2rem -2rem 2rem var(--blue-darker);
-  background: linear-gradient(225deg, #00000000 40%,var(--blue-darker) 40%, #00000000 50%); 
-}
-#s-web-projects .section-content .project-move-right .angle-arrow:hover {
-  box-shadow: 2rem -2rem 2rem var(--white);
-  background: linear-gradient(225deg, #00000000 40%,var(--white) 40%, #00000000 50%); 
-}
-#s-dev-projects .section-content .project-move-left .angle-arrow {
-  box-shadow: -2rem 2rem 2rem var(--grey-dark);
-  background: linear-gradient(45deg, #00000000 40%,var(--grey-dark) 40%, #00000000 50%); 
-}
-#s-dev-projects .section-content .project-move-left .angle-arrow:hover {
-  box-shadow: -2rem 2rem 2rem var(--white);
-  background: linear-gradient(45deg, #00000000 40%,var(--white) 40%, #00000000 50%); 
-}
-#s-dev-projects .section-content .project-move-right .angle-arrow {
-  box-shadow: 2rem -2rem 2rem var(--grey-darker);
-  background: linear-gradient(225deg, #00000000 40%,var(--grey-darker) 40%, #00000000 50%); 
-}
-#s-dev-projects .section-content .project-move-right .angle-arrow:hover {
-  box-shadow: 2rem -2rem 2rem var(--white);
-  background: linear-gradient(225deg, #00000000 40%,var(--white) 40%, #00000000 50%); 
-}
-
 
 .section-bar .section-content .project-group { 
   position: relative;
@@ -434,16 +367,15 @@ main {
   width: 100%;
   overflow-y: auto;
   box-shadow: 0 0.2rem 0.2rem var(--light-shadow);
+  text-align: justify;
+  color: var(--white);
   padding-left: 10%;
   padding-right: 10%;
 }  
-.section-bar .section-desc p{
-  display: block;
-  height: 100%;
-  text-align: justify;
-  color: var(--white);
-}
-.section-bar .section-desc p a{ 
+.section-bar .section-desc ul{ 
+ list-style: circle inside;
+} 
+.section-bar .section-desc a{ 
   text-decoration: underline;    
   color: var(--orange);      
 }      
@@ -454,7 +386,7 @@ main {
 #s-hobby .section-desc {
   background-color: var(--shadow);
 }
-#s-hobby ul{
+#s-hobby .section-content{
   flex-direction: column;
   box-sizing: border-box;
   padding: 1rem;
@@ -462,20 +394,10 @@ main {
   width: 32rem;
   box-shadow: 0 0.2rem 0.2rem var(--light-shadow);
 }
-#s-hobby ul li{
+#s-hobby .section-content li{
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-}
-#s-hobby ul li i{
-  flex: 1 1 6.8rem;
-}
-#s-hobby ul li:hover i{
-  flex: 1 1 4.8rem;
-}
-#s-hobby ul li h2{
-  text-align: left;
-  flex: 1 1 27.2rem;
 }
 
 #s-contact {
