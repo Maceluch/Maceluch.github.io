@@ -243,9 +243,7 @@ function toggleMenu(forceInputCheck) {
       case 1: togglePortrait(); // hide portrait                    
               break;
       default: 
-    }
-    // const SEL_LI = selIdHeader.querySelectorAll("li");
-    // SEL_LI.forEach((el) => el.classList.toggle("btn"));
+    }    
 };
 
 function toggleSection(num) {
@@ -316,6 +314,27 @@ function updateHobbyDesc(num) {
 }
 
 function onLoad() {
+  //css hover contact item:
+  Array.from(document.querySelectorAll(`.contact-item`)).forEach(contactItem => {
+    contactItem.addEventListener("mouseover", () => {contactItem.style = 
+      `transform: translateY(1rem); 
+      -webkit-transform: translateY(1rem);
+      -moz-transform: translateY(1rem);
+      -o-transform: translateY(1rem);
+      -ms-transform: translateY(1rem);`});    
+    contactItem.addEventListener("mouseleave", () => contactItem.style = ``);
+    contactItem.addEventListener("click", () => contactItem.style = ``);
+  });
+  //css hover header btns item:
+  Array.from(selIdHeader.querySelectorAll(`.btn`)).forEach(el => {
+    const elIcon = el.querySelector(`.icon`);
+    elIcon.addEventListener("mouseover", () => {
+      elIcon.style.opacity = `0.9`;
+      elIcon.style.backgroundColor = `var(--blue-semi)`;
+    });
+    elIcon.addEventListener("mouseleave", () => elIcon.style = ``);      
+    elIcon.addEventListener("click", () => elIcon.style = ``);
+  });
   //onLoad: hide foldout menu
   selIdHeader.querySelector(`#${idFoldoutToggle}`).checked = false;
 
