@@ -15,7 +15,7 @@ httpRequest.onload = function() {
 		prepareGameData(dictionary[rand],[data[dictionary[rand]]]);
 	}
 };
-const requestURL = 'https://raw.githubusercontent.com/Maceluch/mscPortfolio/master/web-projects/hangman/wordsapi_reduced.json';
+const requestURL = 'https://raw.githubusercontent.com/Maceluch/Maceluch.github.io/master/web-projects/hangman/wordsapi_reduced.json';
 const gameData = {
 	"isTwoWords": false,
 	"pass": "",
