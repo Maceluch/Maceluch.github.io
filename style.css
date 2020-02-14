@@ -550,3 +550,8 @@ main {
 .hide {
   display: none
 }
+
+
+.btn-angle:focus {
+  outline: 0;
+}
