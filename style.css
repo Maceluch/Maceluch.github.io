@@ -521,10 +521,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: center;    
-  }
-  #portrait img {    
-    max-height: 100%;
-  }
+  } 
 }
 @media only screen and (max-width: 30.6em) {  
   .btn {

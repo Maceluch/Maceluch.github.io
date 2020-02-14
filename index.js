@@ -377,8 +377,9 @@ function onLoad() {
       
       const arrowColorSrc = `svg/left-${isWeb ? "blue" : "grey"}.svg`;
       const selLeftArrow = selProjectContent.querySelector(`.project-move-left`).appendChild(document.createElement(`button`));
+      selLeftArrow.style=`border: 0 none !important`;
       selLeftArrow.style.background=`transparent`;
-      selLeftArrow.style.border=`none`;
+      
       const selLeftArrowImg = selLeftArrow.appendChild(document.createElement(`img`));
       
         selLeftArrowImg.src = arrowColorSrc;
